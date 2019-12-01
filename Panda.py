@@ -4,7 +4,7 @@ class Panda():
     def __init__(self,name,age,hungry):
         self.data = {"name":name,"age":age,"hungry":hungry}
         if self.data.get("hungry") == True:
-            print("I'am Hungry!")
+            print("I Am Hungry!")
 
 pan = Panda("Big Panda","N/A",True)
 
