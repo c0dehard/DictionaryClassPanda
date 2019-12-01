@@ -9,3 +9,8 @@ class Panda():
 pan = Panda("Big Panda","N/A",True)
 
 print(f'And my name is: ,,{pan.data.get("name")}"')
+
+#test namenändern / change name test      
+pan.data["name"] = "c0deN@c0dehard"
+print(f'Name changed to: {pan.data.get("name")}')
+#YES i LOVE Format Strings!
