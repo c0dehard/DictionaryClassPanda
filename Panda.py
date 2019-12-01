@@ -4,9 +4,13 @@ class Panda():
     def __init__(self,name,age,hungry):
         self.data = {"name":name,"age":age,"hungry":hungry}
         if self.data.get("hungry") == True:
-            print("I'am Hungry!")
+            print("I Am Hungry!")
 
 pan = Panda("Big Panda","N/A",True)
+meng = Panda("MengMeng","N/A",False)
+testo = Panda("Testo","N/A",False)
+
+pandasInZoo={"male":pan,"female":meng,}
 
 print(f'And my name is: ,,{pan.data.get("name")}"')
 
@@ -27,3 +31,15 @@ def favFoodOf(name):
 
 # just pass the object as parameter of this function
 favFoodOf(pan)
+          
+#new examples, but this time from the pandasInZoo from line 13
+#results mengmeng likes None, because not defined yet
+favFoodOf(pandasInZoo["female"])
+#now assign the favfood for mengmeng as well..
+pandasInZoo["female"].data["favfood"] = "Bamboo"
+          
+          #print again
+favFoodOf(pandasInZoo["female"])
+#there we go it prints she likes bamboo as well!
+
+         
