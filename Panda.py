@@ -51,4 +51,26 @@ pandasInZoo["testo"].data.pop("age")
 pandasInZoo["testo"].data["age"]= 1
 print(f"and it's age now is: {testo.data.get('age')} and, his age is a Datatype of: {type(testo.data.get('age'))}")
 #OH i realy like format Strings!!!
+
+
+
+
+
+'''
+fresh spahetti
+
+'''
+
+aPan = Panda("AlbertPanda","",False)
+bPan = Panda("BallPanda","",False)
+cPan = Panda("CutiePan","",False)
+
+typeof = {"m":(aPan.data.get("name"),bPan.data.get("name")),"f":cPan.data.get("name")}
+
+#aint rly OOP im bored just messing a bit
+
+#lets see what names in what basic gendertypes
+print(f'Male Panda Names: {gender["m"]}\nFemale Panda Names: {typeof["f"]}')
+
+
           
