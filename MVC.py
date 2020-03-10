@@ -1,7 +1,7 @@
 class Model:
     def modeldaten(self):
-        print('Model fragt daten ab')
-        data = 'Model daten könnten hier stehen'
+        print('Model fragt Daten ab')
+        data = 'Model Daten könnten hier stehen'
         return data
 
 class View:
@@ -10,15 +10,16 @@ class View:
 
 class Controller:
     # Initialisierung / Konstruktor
-    # Instanziierung von model und view
+    # Instanziierung von Model und View
     def __init__(self):
         self.model = Model()
         self.view = View()
 
+
     # Controller hat eine Methode welche auf Methoden
     # der instanziierten Klassen zugreifen kann
     def present(self):
-        print('Controller verwaltet model und view')
+        print('Controller verwaltet Model und View')
         data = self.model.modeldaten()
         self.view.render(data)
 
