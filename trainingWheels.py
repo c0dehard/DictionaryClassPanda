@@ -7,7 +7,7 @@ def justInts(string):
     """
     import re
     return re.findall(r"\d+",string)
-    del re
+    # del re # I'm a fool sometimes, no code execution in this scope after return statement
     
 # TODO Add more helpful functions
 """
