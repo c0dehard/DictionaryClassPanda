@@ -16,7 +16,7 @@ def allRand(upTo=50):
     ### up to the given number in a list
     if nothing's set basic will be 50
     #### Example:
-        x = anyRand(10)
+        x = allRand(10)
     ###  print(x)
      >>> [9, 8, 2, 5, 2, 6, 2, 0, 4, 1]
     """
