@@ -1,23 +1,20 @@
 import os
-os.system('cls' if os.name == 'nt' else 'clear')
 
-def durchschnittVon(eingabe,delimiter = " "):
-    """==
-    WICHTIG: Delimiter wird berücksichtigt.\n
-    Sofern nichts angegeben ist ein Leerzeichen der Delimiter.\n
-    Nimmt Werte und berechnet die durchschnittliche Länge. Generell gilt :                                     
-    Summe aller Zahlen durch die Anzahl der Zahlen  ist  der Durchschnitt"""
-    eingegeben=eingabe.split(" ")
+# BECAUSE NT AIN'T MY BEST FRIEND
+os.system('clear' if os.name != 'nt' else 'cls')
 
+
+def avgWordLen(values,delimiter = " "):
+    """
+    #### returns the average length of given values: 
+    if not specified, space will be the basic delimiter
+    #### Example:
+        x = avgWordLen("One two three four five six")
+    ###  print("avg is: ",x)
+     >>> avg is 3.6666666666666665
+    """
+    enteredValues=values.split(" ")
     x=0
-    # TODO  einen Weg finden der genauer aufrundet anstelle:
-    # import numpy as np      np.round(x/len(eingegeben),2)
-    #                         round(x/len(eingegeben)
-    #
-    for werte in range(len(eingegeben)):
-        x=x+len(eingegeben[werte])
-    return f'Die Werte sind im Durchschnitt {x/len(eingegeben)} Zeichen lang'
-
-
-nurEinTest = durchschnittVon(input('Wörter mit Leerzeichen trennen.. Enter zum beenden\n>'))
-print(nurEinTest)
+    for value in range(len(enteredValues)):
+        x=x+len(enteredValues[value])
+    return x/len(enteredValues)
