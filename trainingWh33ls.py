@@ -3,7 +3,7 @@ def justInts(string):
     ### returns a list of integers 
     ### from a specified string
     #### Example:
-        x = justInts(input("Just get ints: "))
+        x = justInts("1.1 example now 2 or four words")
     ###  print(x)
      >>> ['1', '1', '2']
     """
