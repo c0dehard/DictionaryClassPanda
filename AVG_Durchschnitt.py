@@ -13,8 +13,8 @@ def avgWordLen(values,delimiter = " "):
     ###  print("avg is: ",x)
      >>> avg is 3.6666666666666665
     """
-    enteredValues=values.split(" ")
+    entered_values=values.split(" ")
     x=0
-    for value in range(len(enteredValues)):
-        x=x+len(enteredValues[value])
-    return x/len(enteredValues)
+    for value in range(len(entered_values)):
+        x=x+len(entered_Values[value])
+    return x/len(entered_Values)
