@@ -1,3 +1,16 @@
+def ytvID(url):
+	"""
+    ### returns YouTube Video ID from given URL
+    ### wheter regular or shortened format
+    ##### Example:
+		x = ytvID(input('enter url: '))
+    ###  print(x)
+	 >>> enter url: https://www.youtube.com/watch?v=jNQXAC9IVRw
+    ### jNQXAC9IVRw
+	"""
+	vid = url.split('/')
+	return vid[-1].split('watch?v=')[-1]
+
 def justInts(string):
     """
     ### returns a list of integers 
