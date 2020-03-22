@@ -1,5 +1,5 @@
 class Buch:
-  
+  # TODO: Dieses Modul in PEP 8 Style umsetzen!
     def __init__(Buch, title, author):
         ''' Hiermit wird ein gewöhnliches Buch erstellt
         mit Buchname.__init__() kann man alles eines Buches Löschen
@@ -13,7 +13,6 @@ class Buch:
     def __repr__(self):
         return self.title
     
-    # TODO @property Decorator hinzufügen
     def informationenErhalten(Buch):
         ''' Gibt Buchtitel und Author formatiert zurück
         :return:'''
