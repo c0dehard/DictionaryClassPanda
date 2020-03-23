@@ -1,7 +1,20 @@
+def incrementArr(array,increment=1):
+    """
+    #### returns the given array increments each number
+    #### Example:
+     x = [1,2,3,4,5]
+     incrementArr(x)
+    ###  print(x)
+    ### [2, 3, 4, 5, 6]
+	"""
+    for num in range(len(array)):
+        array[num]=array[num]+increment
+    return array
+
 def ytvID(url):
 	"""
-    ### returns YouTube Video ID from given URL
-    ### wheter regular or shortened format
+    #### returns YouTube Video ID from given URL
+    ##### wheter regular or shortened format
     ##### Example:
 		x = ytvID(input('enter url: '))
     ###  print(x)
