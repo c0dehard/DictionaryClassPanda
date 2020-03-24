@@ -7,8 +7,13 @@ class Lockable(object):
     def __repr__(self):
         return f"{self.value} {' is locked' if self.locked else ' is unlocked'}"
 
-    # TODO need to SHORTEN def lock, aint the best solution yet
-    # JUST A QUICK SPAGHETTI CODE IDEA
+    
+    '''
+    TODO need to SHORTEN def lock, aint the best solution yet
+    JUST A QUICK SPAGHETTI CODE IDEA
+    '''
+    
+    
     def lock(self,trueORFalse=True):
         if trueORFalse != False:
 
