@@ -1,8 +1,21 @@
+def countVowels(string):
+    """
+    #### returns amount of vowels in given string
+    #### Example:
+        x = countVowels("The meaning of life, 42 to proof this, is this text"*3)
+    ###  print(x)
+    ### 42
+	"""
+    vowels,counter = ("aeiou"),0
+    for i in string:
+        if i.lower() in vowels : counter+=1
+    return counter
+
 def incrementArr(array,increment=1):
     """
     #### returns the given array increments each number
     #### Example:
-     x = [1,2,3,4,5]
+       x = [1,2,3,4,5]
      incrementArr(x)
     ###  print(x)
     ### [2, 3, 4, 5, 6]
@@ -11,23 +24,35 @@ def incrementArr(array,increment=1):
         array[num]=array[num]+increment
     return array
 
+def decrementArr(array,decrement=1):
+    """
+    #### returns the given array decrements each number
+    #### Example:
+       x = [1,2,3,4,5]
+     decrementArr(x)
+    ###  print(x)
+    ### [0, 1, 2, 3, 4]
+	"""
+    for num in range(len(array)):
+        array[num]=array[num]-decrement
+    return array
+
 def ytvID(url):
 	"""
     #### returns YouTube Video ID from given URL
     ##### wheter regular or shortened format
     ##### Example:
-		x = ytvID(input('enter url: '))
+	 x = ytvID(input('enter url: '))
     ###  print(x)
 	 >>> enter url: https://www.youtube.com/watch?v=jNQXAC9IVRw
     ### jNQXAC9IVRw
 	"""
-	vid = url.split('/')
-	return vid[-1].split('watch?v=')[-1]
+	vid = url.split('/');return vid[-1].split('watch?v=')[-1]
 
 def justInts(string):
     """
-    ### returns a list of integers 
-    ### from a specified string
+    #### returns a list of integers 
+    ##### from a specified string
     #### Example:
         x = justInts("1.1 example now 2 or four words")
     ###  print(x)
@@ -48,8 +73,7 @@ def allRand(upTo=50):
     """
     x=[]
     import random
-    for nums in range(upTo):
-        x.append(int(random.randrange(0,upTo)))
+    for nums in range(upTo):x.append(int(random.randrange(0,upTo)))
     return x
 
 def avgWordLen(values,delimiter = " "):
@@ -67,9 +91,8 @@ def avgWordLen(values,delimiter = " "):
         x=x+len(enteredValues[value])
     return x/len(enteredValues)
 
-
 # TODO Add more helpful functions
 """
-I didn’t knew python comments where formatable as well in vscode!
-Figured out accidentally :D
+I didn’t knew python comments where formatable in vscode!
+Figured out accidentally, LOVE IT :D
 """
