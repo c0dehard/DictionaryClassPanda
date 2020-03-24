@@ -29,7 +29,7 @@ class Lockable(object):
     def isLocked(self):
         return self.locked
 
-# TODO ADD PROPERTYS, should confuse less
+# TODO ADD PROPERTIES
     def setValue(self,value):
         if self.locked:
             self.__repr__()
