@@ -1,6 +1,6 @@
 def reversedList(n,downToZero=True):
     """
-    #### returns a list ordered descending from n down to 0
+    #### returns a list from n to lowest in a descending order
     ###  input has to be an integer
     #### Example:
         x = reversedList(10,False)
@@ -8,7 +8,7 @@ def reversedList(n,downToZero=True):
     ### [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 	"""
     list=[]
-    one = 1 if not downToZero else 0
+    one = 0 if not downToZero else 1
     # todo improve this someday
     for i in range(n+one):
         list.append(n)
