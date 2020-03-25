@@ -1,3 +1,20 @@
+def reversedList(n):
+    """
+    #### returns a list ordered descending from n down to 0
+    ###  input has to be an integer
+    #### Example:
+        x = reversedList(10)
+    ###  print(x)
+    ### [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+	"""
+    list=[]
+    # remove +1 if you don't need a 0
+    # todo improve this someday
+    for i in range(n+1):
+        list.append(n)
+        n-=1
+    return list
+re
 def countVowels(string):
     """
     #### returns amount of vowels in given string
