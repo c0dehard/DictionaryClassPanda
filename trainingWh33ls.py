@@ -1,3 +1,14 @@
+def check(elem, seq):
+    """
+    #### returns True or False
+    ###  checks if element exists in the given sequence
+    #### Example:
+        x = check("d","abcde")
+    ###  print(x)
+    ### True
+	"""
+    return elem in seq
+
 def reversedList(n,downToZero=True):
     """
     #### returns a list from n to lowest in a descending order
