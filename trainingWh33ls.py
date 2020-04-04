@@ -1,3 +1,12 @@
+def double_char(s):
+    """
+    #### doubles every char and returns as string
+    #### Example:
+        x = double_char("Bla bla")
+    ###  print(x)
+    ### BBllaa  bbllaa
+    """
+	return ''.join(c * 2 for c in s)
 def check(elem, seq):
     """
     #### returns True or False
