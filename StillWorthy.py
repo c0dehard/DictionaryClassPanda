@@ -11,12 +11,12 @@ class Service:
         Service.add_service(self.name)
     @classmethod
     def list_services(cls):
-    """returns a list of service names"""
+        """returns a list of service names"""
         for items in cls.services_list:
             return items
     @classmethod
     def add_service(cls,name):
-    """counts one up and appends service name to list"""
+        """counts one up and appends service name to list"""
         cls.running_services+=1
         cls.services_list.append(name)
     # TODO remove_service method
