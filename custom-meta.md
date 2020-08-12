@@ -53,7 +53,7 @@ Gets printed at create time without even instance it, because of the overwritten
 ```
 
 ## Metaclasses can be really powerful be careful with them, only use when there's a need!
-For example, check for non dunder attributes names and make 'em uppercase, by adding to an internal list if non dunder and return upper, so the new object will automatically have uppercase attributes after its created.
+For example, check for non dunder attributes names and make 'em uppercase, by adding to an internal dictionary if non dunder and return upper, so the new object will automatically have uppercase attributes after its created.
 ```python
 class CustomMeta(type):
     def __new__(self,cname,bases,attrs):
