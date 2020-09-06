@@ -1,6 +1,7 @@
 ## Old and new PythonStuff 🐍 
 
 Nothing serious, just old and now some new stuff.
+<br/>
 `# TODO: Refactor old code to match PEP-8 and add more stuff. 🤪`
 
 All the codes provided on this repository are for educational purposes only.
