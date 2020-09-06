@@ -30,6 +30,6 @@ def lineareSuche(woSuchen,wasGesucht):
 # ordner1 = ["audio.ogg","bild.png","beispiel.py","index.php"]
 # print(lineareSuche(ordner1,"beispiel.py"))
 
-# Damit man das Modul nicht ausfersehen direkt einfach in der Konsole ausführt 
+# Damit man das Modul nicht ausversehen direkt einfach in der Konsole ausführt 
 if __name__ == "__main__":
     hinweis()
