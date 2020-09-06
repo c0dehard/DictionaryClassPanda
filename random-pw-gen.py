@@ -8,7 +8,7 @@ window = Tk() ; window.title('Password Generator')
 window.geometry('200x100') ; window.configure(background='#ffffff')
 
 def gen_pw(scale):
-    pw = ''.join(random.choice(string.ascii_letters) for i in range(random.randint(scale,scale)))
+    pw = ''.join(random.choice(string.ascii_letters+string.punctuation+string.digits) for i in range(random.randint(scale,scale)))
     set_pw(pw)
     
 def set_pw(text):
