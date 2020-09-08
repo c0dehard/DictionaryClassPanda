@@ -1,70 +1,66 @@
-class Buch:
-  # TODO: Dieses Modul in PEP 8 Style umsetzen!
-    def __init__(Buch, title, author):
-        ''' Hiermit wird ein gewöhnliches Buch erstellt
-        mit Buchname.__init__() kann man alles eines Buches Löschen
-        TODO Ein Buch soll natürlich auch Inhalt haben später
-        :param title:
-        :param author:
+class book:
+
+    def __init__(self, title, author):
+        ''' This will create an ordinary book
+        with Bookname.__init__() you can delete all entries of a book
         '''
-        Buch.author = author
-        Buch.title = title
+        self.author = author
+        self.title = title
 
     def __repr__(self):
         return self.title
-    
-    def informationenErhalten(Buch):
-        ''' Gibt Buchtitel und Author formatiert zurück
-        :return:'''
-        return "{Buch.title} geschrieben von {Buch.author}"
 
-class buechereiBuch(Buch):
-    def __init__(self,title,author,verfuegbar):
-        '''Bücher für eine Bücherei, können auch ihre eigenen Titel / eigenes Cover tragen
-        :param title:
+    def information_receive(self, book):
+        ''' Returns book title and author formatted
+        :return:'''
+        return "{self.title} written by {self.author}"
+
+
+class library_book(book):
+    def __init__(self, title, author, available):
+        '''books for a library, can also have their own title / cover
+        param title:
         :param author:
-        :param verfuegbar:'''
-        super().__init__(title,author);self._verfuegbar = verfuegbar
+        :param available:'''
+        super().__init__(title, author)
+        self._available = available
 
-    def informationenErhalten(self):
+    def information_receive(self):
         '''
-        Zeigt an wie oft ein Buchtitel eines BüchereiBuches noch vorrätig ist (auf Lager)
-        :return:'''
-        super().informationenErhalten()
-        print(f"von {self.title} sind noch {self.verfuegbar} auf Lager")
+        Shows how often a book title of a library book is still in stock (in stock)
+        : return: '''
+        super().information_receive()
+        print(f"of {self.title} are still {self.title} available")
 
-class buecherei(buechereiBuch):
+
+class bookstore(library_book):
     def __init__(self):
-        '''Eine Bücherei kann nur Büchereibücher BEINhalten.. <.<'''
+        '''A bookstore can only contain library books in this case.'''
         self.buecher = []
 
-    def buchAnStelle(self,index):return self.buecher[index]
+    def book_with_position(self, index): return self.buecher[index]
+
+    def newBook(self, library_book):
+        '''Add a book to the library
+        Transfer TODO book lists directly
+        : param book:
+        : return:'''
+        self.buecher.append(library_book)
 
 
-    def neuesBuch(self,buechereiBuch):
-        '''Ein Buch zur Bücherei hinzufügen
-        TODO Bücherlisten direkt übergeben
-        :param Buch:
-        :return:'''
-        self.buecher.append(buechereiBuch)
-    
-def hinweis():
-    print("""Dieses Modul muss importiert werden! Nicht direkt ausführbar.
-    \nAnbei ein Beispiel:
+def hint():
+    print("""This module must be imported! Not directly executable.
+    \next an example:
+    a = library_book("Hairy Otter", "Jay.Kay. Blank",True)
+    city_bookstore = bookstore()
+    city_bookstore.newBook(a)
+    print(city_bookstore.book_with_position(0))
 
-    a = buechereiBuch("Hairy Otter","Jay.Kay. Rohling",True)
-    stadtBuecherei = buecherei()
-    stadtBuecherei.neuesBuch(a)
-    print(stadtBuecherei.buchAnStelle(0))
-    
     """)
 
+
 if __name__ == "__main__":
-    
-    hinweis()
-    
-    a = buechereiBuch("Hairy Otta","Jay.Kay. Rohling",True)
-    stadtBuecherei = buecherei()
-    stadtBuecherei.neuesBuch(a)
-    
-    print("Output:",stadtBuecherei.buchAnStelle(0))
+    lb = library_book("Hairy Otta", "Jay.Kay. blank", True)
+    city_bookstore = bookstore()
+    city_bookstore.newBook(lb)
+    print(city_bookstore.book_with_position(0))
