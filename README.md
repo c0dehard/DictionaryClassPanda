@@ -6,7 +6,8 @@ Nothing serious, just old and now some new stuff.
 `# TODO: Refactor old code to match PEP-8 and add more stuff. 🤪`
 
 ## Contributing
-If you find any mistakes or you just have an better idea, open an issue or create a pull request.
+Found a mistake, got an idea?
+All contributions are welcomed. Just fork the repo and add your commits.
 
 ## Liability
 All the codes provided on this repository are for educational purposes only.
