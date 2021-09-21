@@ -1,6 +1,6 @@
 import names
 import random
-
+# TODO: Simple GUI with tkinter or kivy maybe?
 def add_domains(n):
     count = 0
     emails = []
